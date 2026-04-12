@@ -1,9 +1,9 @@
 library(data.table) 
 library(stringr) 
 # 1 文件路径 
-anno_file  <- "<您的文件目录>/maize_long_table.txt" 
-id_file    <- "<您的参考数据库的目的基因如AGC的id文件目录>/B73_id.txt" 
-output_file<- "<您的输出目录>/target_SV.txt" 
+anno_file  <- "../maize_long_table.txt" 
+id_file    <- "../B73_id.txt" 
+output_file<- "../target_SV.txt" 
 # 2 读取数据 
 dt_anno <- fread(anno_file) 
 dt_ids  <- fread(id_file, header = FALSE) 

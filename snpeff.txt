@@ -1,0 +1,11 @@
+#环境：power shell 
+#建库（不检查CDS 和 Protein；预先下载数据 Zm-B73-REFERENCE-NAM-5.0.fa及.gff3）到/data；在 snpeff.config 中修改 data.dir= ./data/为 data.dir= data，否则易因路径问
+题报错） 
+java -jar snpeff.jar build -gff3 -v -noCheckCds -noCheckProtein Zm-B73-NAM-5.0 
+
+#调用 snpEff进行注释（一次性完成，未分类） 
+java -Xmx4G -jar snpeff.jar eff -csvStats variants.SnpEff.csv -s variants.SnpEff.html -c snpeff.config -v -ud 2000 Zm-B73-NAM-5.0 ` 
+<待分析 vcf 文件路径\您的文件.vcf> > <输出文件路径\注释后的文件.vcf>
+
+#SnpSift 提取注释信息（添加-s命令，使字段之间用逗号分隔；-e用于保留END） 
+java -Xmx4G -jar SnpSift.jar extractFields -s "," -e "." SVs.vcf CHROM POS END ID REF ALT ANN[*].GENEID ANN[*].EFFECT ANN[*].IMPACT > annotation_table.txt 

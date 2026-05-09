@@ -10,4 +10,5 @@
 3.conver_v3.py转长表  
 4.filter.R筛选目的基因  
 5.location_analysis.R验证是否有重叠  
-6.merge_sanmple.R进行表达关联分析（需事先与样本名关联，这里省略）
+6.merge_sanmple.R进行样本名关联  
+7.sv_express.py进行表达关联分析

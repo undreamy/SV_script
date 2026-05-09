@@ -6,7 +6,7 @@ Java Runtime Environment 8+，Python 3.7+（"sys""argparse""pandas""numpy"等）
 
 **输入数据**  
 1.参考基因组的fa和gff3文件  
-2.待处理的SV数据（VCF），需包含标准VCF字段（如 CHROM, POS, END, ID, REF, ALT）。 
+2.待处理的SV数据（VCF），需包含标准VCF字段（如 CHROM, POS, END, ID, REF, ALT）。  
 3.目的基因列表和样本（品系）名称列表（txt）  
 4.表达矩阵（TPM）  
 

@@ -1,8 +1,8 @@
 # SV_script
 基于玉米26个NAM品系的SV数据，经snpEff注释，python、R等处理。筛选得到AGC家族的SV数据，并给出overlap验证。接着进行表达关联分析。  
 
-**依赖环境**  
-Java Runtime Environment 8+，Python 3.7+，R 4.0+（"data.table""stringr""optparse"），snpEff  
+**依赖环境和包**  
+Java Runtime Environment 8+，Python 3.7+（"sys""argparse""pandas""numpy"等），R 4.0+（"data.table""stringr""optparse"等），snpEff  
 
 **输入数据**  
 1.参考基因组的fa和gff3文件  
